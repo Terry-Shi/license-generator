@@ -14,6 +14,9 @@ public class RSATester {
             privateKey = RSAUtils.getPrivateKey(keyMap);
             System.err.println("公钥: \n\r" + publicKey);
             System.err.println("私钥： \n\r" + privateKey);
+
+            Base64Utils.decodeToFile("privateKey.der", privateKey);
+            Base64Utils.decodeToFile("publicKey.der", publicKey);
         } catch (Exception e) {
             e.printStackTrace();
         }
